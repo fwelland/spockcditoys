@@ -13,7 +13,7 @@ public class SomethingToTest
     @PostConstruct
     private void init()
     {
-        System.out.println("post construction");
+        System.out.println("SomethingToTest:  post construction");
     }
 
 
