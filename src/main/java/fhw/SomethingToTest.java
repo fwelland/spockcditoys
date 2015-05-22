@@ -1,30 +1,27 @@
-package fhw;
+    package fhw;
 
-import javax.annotation.PostConstruct;
-import javax.ejb.Stateless;
+    import javax.annotation.PostConstruct;
+    import javax.inject.Named;
 
-
-@Stateless
-public class SomethingToTest
-{
-
-    public SomethingToTest() {}
-
-    @PostConstruct
-    private void init()
+    @Named
+    public class SomethingToTest
     {
-        System.out.println("SomethingToTest:  post construction");
-    }
+        public SomethingToTest() {}
 
-
-    public String upShift(String in)
-    {
-        String s = null;
-        if(null != in)
+        @PostConstruct
+        private void init()
         {
-            s = in.toUpperCase();
-        }
-        return(s);
-    }
 
-}
+        }
+
+        public String upShift(String in)
+        {
+            String s = null;
+            if(null != in)
+            {
+                s = in.toUpperCase();
+            }
+            return(s);
+        }
+
+    }

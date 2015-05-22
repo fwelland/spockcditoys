@@ -15,7 +15,6 @@ public class Chompers
 //    def Weld weld
 //    def WeldContainer container
 
-    @Tig
     def setup()
     {
         println "setup (instance " + this + ") and somethingToTest is null " + (null == somethingToTest)
@@ -31,7 +30,7 @@ public class Chompers
 //        println "setter fired  and somethingToTest is null?  " + (null == somethingToTest)
 //    }
 
-    @Tig
+
     def "my first Test"()
     {
         given:

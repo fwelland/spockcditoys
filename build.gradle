@@ -32,9 +32,12 @@ dependencies {
     //compile 'javax:javaee-api:7.0'
     compile "org.jboss.spec:jboss-javaee-6.0:3.0.2.Final",
             'org.spockframework:spock-core:1.0-groovy-2.4',
-            'org.jboss.weld.se:weld-se-core:2.2.10.Final'
+            'org.jboss.weld.se:weld-se-core:2.2.12.Final'
 
     testCompile group: 'junit', name: 'junit', version: '4.10',
+                        'org.powermock:powermock-core:1.6.2',
+                        'org.powermock:powermock-api-easymock:1.6.2',
+                        'org.easymock:easymock:3.3.1',
 //                'org.jglue.cdi-unit:cdi-unit:3.1.2',
 //                'org.javassist:javassist:3.18.2-GA',
                 'com.athaydes:spock-reports:1.2.5'

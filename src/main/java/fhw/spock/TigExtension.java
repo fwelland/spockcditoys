@@ -16,7 +16,7 @@ public class TigExtension
     @Override
     public void visitSpecAnnotation(Tig tig, SpecInfo spec)
     {
-        System.out.println("visitSpecAnnotation for " + spec.getClass().getName());
+        System.out.println("visitSpecAnnotation for " + spec.getReflection().getName());
         weld = new Weld();
         container = weld.initialize();
         container.instance().select( spec.getReflection() ).get();
@@ -38,13 +38,13 @@ public class TigExtension
     }
 
 
-    @Override
-    public void visitSpec(SpecInfo spec)
-    {
-        System.out.println("visitSpec for " + spec.getName());
-        weld = new Weld();
-        container = weld.initialize();
-        container.instance().select( spec.getReflection() ).get();
-    }
+//    @Override
+//    public void visitSpec(SpecInfo spec)
+//    {
+//        System.out.println("visitSpec for " + spec.getName());
+//        weld = new Weld();
+//        container = weld.initialize();
+//        container.instance().select( spec.getReflection() ).get();
+//    }
 
 }
